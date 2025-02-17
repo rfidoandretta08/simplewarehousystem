@@ -21,7 +21,6 @@ func ConnectDatabase() {
 
 	log.Println("Database connected successfully")
 
-	// Melakukan AutoMigrate untuk membuat tabel berdasarkan model
 	err = DB.AutoMigrate(&models.Product{}, &models.Inventory{}, &models.Order{})
 	if err != nil {
 		log.Fatal("Error during migration:", err)

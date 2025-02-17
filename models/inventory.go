@@ -18,10 +18,6 @@ func CreateInventory(db *gorm.DB, inventory *Inventory) error {
 
 func GetInventoryByProductID(db *gorm.DB, productID uint) (*Inventory, error) {
 	var inventory Inventory
-	//if err := db.Where("product_id = ?", productID).First(&inventory).Error; err != nil {
-
-	//return nil, err
-	//}
 	if err := db.Preload("Product").Where("product_id = ?", productID).First(&inventory).Error; err != nil {
 		return nil, err
 	}

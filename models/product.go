@@ -10,6 +10,7 @@ type Product struct {
 	Description string `gorm:"type:text"`
 	Price       float64
 	Category    string `gorm:"type:varchar(255);not null"`
+	ImageURL    string `gorm:"type:varchar(255);"`
 }
 
 func CreateProduct(db *gorm.DB, product *Product) error {
@@ -42,7 +43,6 @@ func DeleteProduct(db *gorm.DB, id uint) error {
 
 func GetProductsByCategory(db *gorm.DB, category string) ([]Product, error) {
 	var products []Product
-	// Mengambil produk berdasarkan kategori
 	if err := db.Where("category = ?", category).Find(&products).Error; err != nil {
 		return nil, err
 	}
