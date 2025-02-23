@@ -1,10 +1,10 @@
-Tugas ini merupakan kelanjutan dari tugas sebelumnya yang berjudul **"Web Server dan Golang Route"**. Pada tugas ini, kami akan memperluas fitur backend yang telah dibuat sebelumnya dengan menambahkan file handling dan storage API untuk mendukung unggah dan unduh file gambar produk.
+Tugas ini merupakan kelanjutan dari tugas sebelumnya yang berjudul **"Web Server dan Golang Route"**. Pada tugas ini, saya akan memperluas fitur backend yang telah dibuat sebelumnya dengan menambahkan file handling dan storage API untuk mendukung unggah dan unduh file gambar produk.
 
 Tugas ini berfokus pada implementasi file handling dan storage API. Fitur yang dikembangkan dalam tugas ini adalah sebagai berikut:
 
 - **Endpoint Upload**: Mengunggah gambar produk ke penyimpanan lokal.
-- **Endpoint Download**: Mengunduh gambar produk berdasarkan ID produk.
-- **Validasi File**: Memastikan hanya format gambar tertentu yang diterima (misal: PNG, JPG, JPEG) dengan ukuran maksimum yang ditentukan.
+- **Endpoint Download**: Mengunduh gambar produk berdasarkan ID produk dan link .
+- **Validasi File**: Memastikan hanya format gambar tertentu yang diterima (misal: JPG) dengan ukuran maksimum yang ditentukan.
 - **Error Handling**: Menangani skenario kesalahan seperti file berukuran terlalu besar atau format yang tidak sesuai.
 
 ## Fitur Utama
